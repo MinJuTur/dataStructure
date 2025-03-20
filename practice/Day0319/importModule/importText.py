@@ -6,5 +6,5 @@ for _ in range(10):
     A.append(random.randint(1, 100))
 
 print("(min, max) =", FindMinMax.find_min_max(A))
-print("Sum =", Sumrange.sum_range(1,10))
+print("Sum =", Sumrange.sum_range(1, 10))
 
