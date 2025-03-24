@@ -11,7 +11,7 @@ def isFull():
 def insert(pos, e):
     global size
     if not isFull() and 0 <= pos <= size: # pos는 size까지 포함돼야 함
-        for i in range(size, pos, -1):
+        for i in range(size, pos, -1): # 뒤쪽 원소들부터 밀려나도록 함
             array[i] = array[i-1]
         array[pos] = e
         size += 1
@@ -22,7 +22,7 @@ def delete(pos):
     global size
     if not isEmpty() and 0 <= pos < size:
         e = array[pos]
-        for i in range(pos,size-1):
+        for i in range(pos,size-1): # 앞쪽 원소들부터 밀려나도록 함
             array[i] = array[i+1]
         size -= 1
         return e

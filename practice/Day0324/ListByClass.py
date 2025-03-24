@@ -40,6 +40,7 @@ class ArrayList:
     def __str__(self):
         return str(self.array[0:self.size])
 
+
 if __name__ == '__main__':
     L = ArrayList(50)
     L.insert(0, 'A')
