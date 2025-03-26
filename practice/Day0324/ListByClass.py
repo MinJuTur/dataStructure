@@ -1,7 +1,7 @@
 class ArrayList:
 
     def __init__(self, capacity=100):
-        self.capacity = 100
+        self.capacity = capacity
         self.size = 0
         self.array = [None] * capacity
 
