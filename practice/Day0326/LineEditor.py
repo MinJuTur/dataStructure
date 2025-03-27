@@ -19,21 +19,24 @@ while True:
     elif commmand == 'p': # 출력
         print("Line Editor")
         for i in range(list.size):
-            print("[ %d] " % i, list.array[i])
+            print("[ %d] " % i, list.getEntry(i))
     elif commmand == 'l': # 파일읽기
         with open("text.txt", "r", encoding="utf-8") as file:
-            #list = ArrayList() 모르겠다..
+            list.__init__() # 리스트 초기화
+
             i = 0
-            for line in [line.strip() for line in file.readlines()]: # 모든 줄을 리스트로 반환, 줄바꿈 제거
-                list.insert(i, line)
+            for line in file:
+                list.insert(i, line.rstrip()) # 줄바꿈 제거 후 리스트에 추가
                 i += 1
+
             print("Line Editor")
             for i in range(list.size):
-                print("[ %d] " % i, list.array[i])
+                print("[ %d] " % i, list.getEntry(i))
     elif commmand == 's': # 저장
         with open("text.txt", "w", encoding="utf-8") as file:
             for i in range(list.size):
-                file.writelines(list.array[i] + "\n")
+                file.write(list.getEntry(i) + "\n")
+            print("저장되었습니다.")
     elif commmand == 'q': # 종료
         break
 

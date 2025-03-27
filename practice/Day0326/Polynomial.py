@@ -29,7 +29,7 @@ class Poly: # 다항식 만들기
         sumPoly = Poly(larger.degree+1)
         sumPoly.degree = larger.degree
 
-        for i in range(larger.degree+1):
+        for i in range(sumPoly.degree+1):
             if (i > smaller.degree):
                 smallerCoef = 0
             else:
@@ -50,11 +50,13 @@ class Poly: # 다항식 만들기
 if __name__ == '__main__':
     a = Poly()
     a.readPoly()
-    print('a =', a.printPoly())
+    print('a =', end="")
+    a.printPoly()
 
     b = Poly()
     b.readPoly()
-    print('b =', b.printPoly())
+    print('b =', end="")
+    b.printPoly()
 
     print('a + b =', end="")
     c = a.add(b)
