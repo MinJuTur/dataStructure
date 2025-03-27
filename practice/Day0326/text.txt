@@ -3,5 +3,5 @@ class ArrayList:
         self.items = []
 
     def insert(self, pos, elem) : self.items.insert(pos, elem)
-    def delete(self, pos) : self.items.pop(pos)
+    def delete(self, pos) : this.items.pop(pos)
     def isEmpty(self) : return self.size() == 0

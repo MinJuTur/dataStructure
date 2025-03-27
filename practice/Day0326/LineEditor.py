@@ -36,7 +36,6 @@ while True:
         with open("text.txt", "w", encoding="utf-8") as file:
             for i in range(list.size):
                 file.write(list.getEntry(i) + "\n")
-            print("저장되었습니다.")
     elif commmand == 'q': # 종료
         break
 
