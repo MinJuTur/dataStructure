@@ -2,7 +2,7 @@ class ArrayStack:
     def __init__(self, capacity = 20):
         self.capacity = capacity
         self.top = -1 # 상단의 요소를 가리킴
-        self.arr = [None] * capacity # 아무것도 없음을 전체에 채워넣기
+        self.array = [None] * capacity # 아무것도 없음을 전체에 채워넣기
 
     def isEmpty(self):
         return self.top == -1
@@ -13,13 +13,13 @@ class ArrayStack:
     def push(self, e):
         if not self.isFull():
             self.top += 1
-            self.arr[self.top] = e
+            self.array[self.top] = e
         else:
             print('Overflow.')
 
     def pop(self):
         if not self.isEmpty():
-            e = self.arr[self.top]
+            e = self.array[self.top]
             self.top -= 1
             return e
         else:
@@ -27,14 +27,14 @@ class ArrayStack:
 
     def peek(self):
         if not self.isEmpty():
-            return self.arr[self.top]
+            return self.array[self.top]
         else:
             print('Underflow.')
 
     def display(self):
         print()
         for i in range(self.top, -1, -1):
-            print(' | %d |' % (self.arr[i]))
+            print(' | %d |' % (self.array[i]))
             print(' -----')
         print()
 
