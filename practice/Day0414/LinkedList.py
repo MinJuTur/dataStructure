@@ -54,18 +54,25 @@ class ListType: # 노드들로 만들어지는 리스트
             print('Underflow')
 
     def delete(self, pos):
-        # 화살표 p, q 필요
-        if pos == 1:
-            self.deleteFirst()
-        else:
-            if pos <= self.size:
-                p = self.getNode(pos-1)
-                q = p.next
+        # 화살표 p, q 필요: 삭제 전, 삭제할 대상 가리키기
+        if pos <= 0 or pos > self.size:
+            print("Invalid Pos.")
+            return
 
-                p.next = q.next
-                self.size -= 1
+        if not self.isEmpty():
+            if pos == 1:
+                return self.deleteFirst()  # deletedFirst()에서 반환 받은 p.data를 받아 다시 반환
             else:
-                print('Underflow')
+                q = self.getNode(pos) # 삭제할 노드의 이전 노드
+                p = q.next # 삭제할 노드
+
+                q.next = p.next
+                self.size -= 1
+
+                return p.data
+        else:
+            print('Underflow.')
+
 
     def printList(self):
         p = self.head # p, q; node들 순회하는 화살표
@@ -87,7 +94,7 @@ if __name__=='__main__':
     L.insert(1, 'E'); L.printList()
 
     print('[%c] is deleted.' % L.deleteFirst()); L.printList()
-    L.delete(2); L.printList()
+    print('[%c] is deleted.' % L.delete(3)); L.printList()
 
 
 
