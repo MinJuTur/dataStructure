@@ -25,7 +25,7 @@ class ListType: # 노드들로 만들어지는 리스트
         self.head = node # 누가 날 가리키지?
         self.size += 1
 
-    def getNode(self, pos):
+    def getNode(self, pos): # (pos - 1)번째 노드를 리턴하는 함수
         p = self.head
         for _ in range(1, pos-1): # 주어진 pos에 따라 몇 번 움직여야 하는지
             p = p.next
