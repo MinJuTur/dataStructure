@@ -37,9 +37,18 @@ def BFS(): # 너비우선탐색
             if isValidPos(r, c-1): Q.enqueue((r, c-1)) # 왼쪽
             if isValidPos(r, c+1): Q.enqueue((r, c+1)) # 오른쪽
 
-        print(Q.array[Q.front+1:Q.rear+1]) # 방문할 수 있는 위치
+        # print(Q.array[Q.front+1:Q.rear+1]) 방문할 수 있는 위치
+        print_queue(Q)
 
     return False
+
+def print_queue(Q):
+    result = []
+    i = Q.front
+    while i != Q.rear:
+        i = (i + 1) % Q.capacity
+        result.append(Q.array[i])
+    print(result)
 
 if __name__ == '__main__':
     result = BFS()
