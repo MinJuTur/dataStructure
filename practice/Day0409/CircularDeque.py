@@ -9,14 +9,14 @@ class CircularDeque(CircularQueue): # CircularQueue 기능 확장 -> CircularQue
         self.enqueue(e)
 
     def deleteFront(self): # dequeue 함수와 연결
-        self.dequeue()
+        return self.dequeue()
 
     def getFront(self): # peek 함수와 연결
-        self.peek()
+        return self.peek()
 
     def addFront(self, e):
         if not self.isFull():
-            self.array[self.front] = e;
+            self.array[self.front] = e
             self.front = (self.front - 1 + self.capacity) % self.capacity
         else:
             print('Overflow.')
