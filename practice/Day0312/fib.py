@@ -17,10 +17,10 @@ def iFib(n):
     
     print("Fibonacci : 0, 1", end='')
 
-    for _ in (2, n+1):
+    for _ in range(2, n+1):
         a, b = b, a+b
         print(',', b, end='')
-    
+
     print()
     return b
 
