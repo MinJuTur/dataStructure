@@ -32,7 +32,7 @@ class CircularList: # 노드들로 만들어지는 리스트
             node.next = node # 누굴 가리키지? 내 자신을 가리키게 됨
             self.tail = node # 누가 날 가리키지?
         else:
-            # insertLast()의 코드와 self.tail = node 제외하고 동일(원형 리스트미으로)
+            # insertLast()의 코드와 self.tail = node 제외하고 동일(원형 리스트이므로)
             node.next = self.tail.next # 누굴 가리키지? 기존 마지막 node가 가리키고 있는 node
             self.tail.next = node # 누가 날 가리키지?
 
