@@ -21,7 +21,6 @@ class ArrayList:
             print("Overflow or Invalid Position.")
 
     def delete(self, pos):
-        global size
         if not self.isEmpty() and 0 <= pos < self.size:
             e = self.array[pos]
             for i in range(pos,self.size-1):
@@ -43,14 +42,12 @@ class ArrayList:
 
 if __name__ == '__main__':
     L = ArrayList(50)
-    L.insert(0, 'A')
-    L.insert(1, 'B')
-    L.insert(1, 'C')
-    print(L)
+    L.insert(0, 'A'); print(L)
+    L.insert(1, 'B'); print(L)
+    L.insert(1, 'C'); print(L)
 
-    L.insert(4, 'D')
-    L.insert(3, 'E')
-    print(L)
+    L.insert(4, 'D'); print(L)
+    L.insert(3, 'E'); print(L)
 
     print('Deleted : %c' % L.delete(1))
     print(L)
