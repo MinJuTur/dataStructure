@@ -1,4 +1,4 @@
-from practice.Day0331.ArrayStack import ArrayStack
+from practice.middle.Day0331.ArrayStack import ArrayStack
 
 map = [['1', '1', '1', '1', '1', '1'],
        ['e', '0', '0', '0', '0', '1'],

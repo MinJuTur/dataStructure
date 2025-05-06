@@ -1,4 +1,4 @@
-from practice.Day0331.ArrayStack import ArrayStack
+from practice.middle.Day0331.ArrayStack import ArrayStack
 
 def order(op): # 연산자 우선순위 계산하는 함수
     if (op == '(' or op == ')'): return 0

@@ -1,4 +1,4 @@
-from practice.Day0324.ListByClass import ArrayList
+from practice.middle.Day0324.ListByClass import ArrayList
 
 list = ArrayList()
 while True:

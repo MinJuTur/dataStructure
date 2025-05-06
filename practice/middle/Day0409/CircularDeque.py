@@ -1,4 +1,4 @@
-from practice.Day0407.CircularQueue import CircularQueue
+from practice.middle.Day0407.CircularQueue import CircularQueue
 
 class CircularDeque(CircularQueue): # CircularQueue 기능 확장 -> CircularQueue 상속 받기
 
