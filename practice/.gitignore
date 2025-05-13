@@ -31,4 +31,6 @@
 *.out
 *.app
 goorm.manifest
+
 *.hwpx
+*.txt
