@@ -32,6 +32,4 @@
 *.app
 goorm.manifest
 
-*.hwpx
-*.txt
-*.pdf
+기타/
