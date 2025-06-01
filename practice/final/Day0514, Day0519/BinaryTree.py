@@ -29,9 +29,9 @@ class BinaryTree:
             print('[%c] '% root.data, end='')
 
     def levelOrder(self, root): # 레벨 순회(BFS와 동일)
-        Q = queue
+        Q = queue.Queue()
         Q.put(root)
-        while not Q.Empty():
+        while not Q.empty():
             root = Q.get() # 꺼내서
             print('[%c] '% root.data, end='') # 방문
 
