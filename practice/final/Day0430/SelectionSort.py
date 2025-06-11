@@ -1,5 +1,5 @@
 def printStep(A, idx):
-    print('  Step %d : ' % idx, end='')
+    print('  Step %d  : ' % idx, end='')
     print(A)
     
 def selectionSort(A): # 선택 정렬 알고리즘

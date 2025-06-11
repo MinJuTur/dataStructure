@@ -10,7 +10,7 @@ def insertionSort(A): # 삽입 정렬 알고리즘
         j = i - 1 # 왼손에 들고 있는 카드
 
         while j >= 0 and A[j] > key:
-            A[j + 1] = A[j] # 오른쪽으로 이동
+            A[j + 1] = A[j] # 오른쪽으로 밀기
             j -= 1 # 그 다음 카드
 
         A[j + 1] = key

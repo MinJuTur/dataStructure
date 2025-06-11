@@ -54,22 +54,22 @@ class SortedArraySet: # 배열을 이용한 정렬된 집합
             b = setB.array[j]
 
             if a == b:
-                setC.append(a)
+                setC.insert(a)
                 i += 1
                 j += 1
             elif a < b:
-                setC.append(a)
+                setC.insert(a)
                 i += 1
             else:
-                setC.append(b)
+                setC.insert(b)
                 j += 1
 
         while i < self.size:
-            setC.append(self.array[i])
+            setC.insert(self.array[i])
             i += 1
 
         while j < setB.size:
-            setC.append(setB.array[j])
+            setC.insert(setB.array[j])
             j += 1
 
         return setC
@@ -83,3 +83,10 @@ if __name__ == '__main__':
         setA.insert(random.randint(1,9))
 
     print('Set A : ', setA)
+
+    setB = SortedArraySet()
+    for i in range(5):
+        setB.insert(random.randint(1, 9))
+
+    print('Set B : ', setB)
+    print('Union : ', setA.union(setB))
