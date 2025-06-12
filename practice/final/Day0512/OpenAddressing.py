@@ -34,7 +34,6 @@ class HashTable:
             if self.table[bucket] == 0: # 빈 방일 때(그 이후 방에도 없다는 뜻)
                 return -1
             elif self.table[bucket] == key: # 찾았을 때
-                self.table[bucket] = 0
                 return bucket
 
     def delete(self, key): # 삭제 연산
