@@ -48,7 +48,7 @@ def insert(root, key):
         print('--- LR Type ---')
         root.left = rotateLeft(root.left) # 왼쪽 서브트리의 모양을 바꾸기(LR로 바꿈)
         return rotateRight(root)
-    if balance < -1 and key > root.left.key: # RL
+    if balance < -1 and key < root.left.key: # RL
         print('--- RL Type ---')
         root.right = rotateRight(root.right) # 오른쪽 서브트리의 모양을 바꾸기(RR로 바꿈)
         return rotateLeft(root)
